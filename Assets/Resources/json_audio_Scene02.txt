@@ -1,0 +1,8 @@
+{
+	"clips":[
+		{"?":"00","path":"Audio/00_Mall","volume":1},
+		{"?":"01","path":"Audio/01_HomePage","volume":1},
+		{"?":"02","path":"Audio/07_RunnerJump","volume":1},
+		{"?":"03","path":"Audio/10_GetItem_0","volume":1}
+	]
+}

@@ -12,7 +12,7 @@ public class Sound_Manager : MonoBehaviour
         public string path;
         public float volume;
     }
-
+    
     private AudioSource audioSource;
     public static Sound_Manager instance = null;
     [SerializeField]
@@ -80,13 +80,17 @@ public class Sound_Manager : MonoBehaviour
         audioSource.clip = null;
     }
 
-
-    public void OnPlayOnShot(int idx) {
+    public void OnPlayOneShot(int idx) {
         audioSource.PlayOneShot(clips[idx].file, clips[idx].volume);
     }
 
-    private void LoadClips(string fileName) {
-        JsonUtility.FromJsonOverwrite(Resources.Load<TextAsset>(fileName).text, this);
+    public void LoadClips(string fileName) {
+        TextAsset textAsset = Resources.Load<TextAsset>(fileName);
+        if (textAsset == null)
+        {
+            return;
+        }
+        JsonUtility.FromJsonOverwrite(textAsset.text, this);
         for (int i = 0; i < clips.Length; ++i) {
             clips[i].file = Resources.Load<AudioClip>(clips[i].path);
         }

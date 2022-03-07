@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class test : MonoBehaviour
 {
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,7 @@ public class test : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.P))
         {
-            Sound_Manager.instance.OnPlayOnShot(2);
+            Sound_Manager.instance.OnPlayOneShot(2);
         }
 
         if (Input.GetKeyDown(KeyCode.S))

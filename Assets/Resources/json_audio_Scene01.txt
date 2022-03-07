@@ -1,0 +1,6 @@
+{
+	"clips":[
+		{"?":"00","path":"Audio/00_Mall","volume":1},
+		{"?":"01","path":"Audio/01_HomePage","volume":1}
+	]
+}
